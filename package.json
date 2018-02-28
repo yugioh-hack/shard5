@@ -1,0 +1,19 @@
+{
+  "name": "shard5",
+  "version": "1.0.0",
+  "description": "wordpress-theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/soramimicake/shard5.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Naoyuki Kuga",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/soramimicake/shard5#readme"
+}
