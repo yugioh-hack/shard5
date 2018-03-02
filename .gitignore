@@ -1,8 +1,8 @@
 dist/
+dest/
 node_modules/
 npm-debug.log*
 .vscode
-
 *.map
 
 .DS_Store
