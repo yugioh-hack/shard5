@@ -1,0 +1,10 @@
+nav.breadcrumb
+  ol.breadcrumb__list(itemscope itemtype="https://schema.org/BreadcrumbList")
+    each item in ["Home","Cat1","SubCat1"]
+      li(itemprpp="itemListElement" itemscope itemtype="https://schema.org/ListItem").breadcrumb__item
+        a(href="#" itemprop="item")
+          span(itemprop="name")
+            =item
+    li(itemprpp="itemListElement" itemscope itemtype="https://schema.org/ListItem").breadcrumb__item
+      span(itemprpp="name") CurrentCat
+

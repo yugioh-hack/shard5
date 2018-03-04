@@ -1,0 +1,69 @@
+$breadcrumb-item-color: $link !default
+$breadcrumb-item-hover-color: $link-hover !default
+$breadcrumb-item-active-color: $text-strong !default
+$breadcrumb-item-margin: 10px !default
+$breadcrumb-list-padding: $gap !default
+$breadcrumb-list-circle: 13px !default
+
+.breadcrumb
+  +block
+  +unselectable
+  align-items: stretch
+  font-size: $size-normal
+  display: flex
+  overflow: hidden
+  overflow-x: auto
+  white-space: nowrap
+
+  a
+    color: $breadcrumb-item-color
+    text-decoration: none
+    display: block
+    //display: flex
+    //justify-content: center
+    &:hover
+      color: $breadcrumb-item-hover-color
+
+  &__list
+    //align-items: center
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    flex-shrink: 0
+    justify-content: flex-start
+    list-style: none
+    padding-left: $breadcrumb-list-padding
+    &.is-active
+      a
+        color: $breadcrumb-item-active-color
+        cursor: default
+        pointer-events: none
+  &__item
+    display: flex
+    align-items: center
+    padding: $breadcrumb-item-margin 0
+    &::after
+      content: ''
+      position: absolute
+      left: ($breadcrumb-list-padding / 2 ) - ($breadcrumb-list-circle / 2)
+      width: $breadcrumb-list-circle
+      height: $breadcrumb-list-circle
+      border-radius: 50%
+      background: $grey-light
+      transform: scale(.9)
+    &:not(:last-child)
+      &::after
+        background: $breadcrumb-item-color
+      &::before
+        content: ''
+        position: absolute
+        left: $breadcrumb-list-padding / 2
+        margin-top: 16px
+        width: 2px
+        height: $gap
+        background: $grey-light
+    &.active
+        pointer-events: none
+        &::after
+          background: $grey-light
+
