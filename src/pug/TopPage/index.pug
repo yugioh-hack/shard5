@@ -7,22 +7,23 @@ html(lang='ja')
   body.site-wrapper
     include ../_includes/_header.pug
 
-    div.column.is-three-quarters-desktop
-      main.section
-        article.tP-main__archive
-          h2.tP-main__title Leastest Index Posts
-          - for(var i=0; i<10; i++) {
-            section.tP-entry
-              figure.tP-entry__img
-                img(src="https://placehold.jp/250x170.png" alt="demo")
-              time.tP-entry__time 2017.12.21
-              h2.tP-entry__title
-                  a(href="#") TITLE title Title TITLE title Title TITLE title Title TITLE title Title TITLE title Title
-          - }
-      div.section
-        include ../_includes/_navigation.pug
+    div.columns.is-desktop
+      div.column.is-three-quarters-desktop
+        main.section
+          article.container
+            h2.tP-main__title Leastest Index Posts
+            - for(var i=0; i<10; i++) {
+              section.tP-entry
+                figure.tP-entry__img
+                  img(src="https://placehold.jp/250x170.png" alt="demo")
+                time.tP-entry__time 2017.12.21
+                h2.tP-entry__title
+                    a(href="#") TITLE title Title TITLE title Title TITLE title Title TITLE title Title TITLE title Title
+            - }
+        div.section
+          include ../_includes/_navigation.pug
 
-    div.column.is-one-quarters-desktop
-      include ../_includes/_sidebar.pug
+      div.column.is-one-quarters-desktop
+        include ../_includes/_sidebar.pug
 
     include ../_includes/_footer.pug
