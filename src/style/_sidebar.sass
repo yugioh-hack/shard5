@@ -1,0 +1,18 @@
+$side-title-color: $grey-darker
+$side-title-size: $size-4
+$side-title-weight: $weight-semibold
+.sidebar
+  &__widget
+    &:not(:last-child)
+      margin-bottom: 1rem
+  &__title
+    +block
+    word-break: break-word
+    color: $side-title-color
+    font-size: $side-title-size
+    font-weight: $side-title-weight
+    line-height: 1.125
+  &__list
+
+.widget
+  margin-bottom: 2rem

@@ -8,7 +8,7 @@ $breadcrumb-list-circle: 13px !default
 .breadcrumb
   +block
   +unselectable
-  align-items: stretch
+  //align-items: stretch
   font-size: $size-normal
   display: flex
   overflow: hidden
@@ -27,12 +27,12 @@ $breadcrumb-list-circle: 13px !default
   &__list
     //align-items: center
     display: flex
-    flex-direction: column
+    //flex-direction: column
     flex-grow: 1
     flex-shrink: 0
     justify-content: flex-start
     list-style: none
-    padding-left: $breadcrumb-list-padding
+    //padding-left: $breadcrumb-list-padding / 8
     &.is-active
       a
         color: $breadcrumb-item-active-color
@@ -43,19 +43,13 @@ $breadcrumb-list-circle: 13px !default
     align-items: center
     padding: $breadcrumb-item-margin 0
     &::after
-      content: ''
-      position: absolute
-      left: ($breadcrumb-list-padding / 2 ) - ($breadcrumb-list-circle / 2)
-      width: $breadcrumb-list-circle
-      height: $breadcrumb-list-circle
-      border-radius: 50%
-      background: $grey-light
-      transform: scale(.9)
+      //content: ''
+      //position: absolute
     &:not(:last-child)
       &::after
-        background: $breadcrumb-item-color
-      &::before
-        content: ''
+        content: '/'
+      //background: $breadcrumb-item-color
+      //&::before
         position: absolute
         left: $breadcrumb-list-padding / 2
         margin-top: 16px
