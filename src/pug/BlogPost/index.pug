@@ -6,22 +6,20 @@ html(lang='ja')
 
   body.site-wrapper
     include ../_includes/_header.pug
-
+    div.section.columns.is-desktop
+      include ../_includes/_breadcrumb.pug
     div.section.columns.is-desktop
       div.column.is-three-quarters-desktop
         main
           section
             h2.index__title Leastest Index Posts
-            - for(var i=0; i<10; i++) {
               article.index-entry
                 figure.index-entry__img
                   img(src="https://placehold.jp/250x170.png" alt="demo")
                 time.index-entry__time 2017.12.21
                 h2.index-entry__title
                     a(href="#") TITLE title Title TITLE title Title TITLE title Title TITLE title Title TITLE title Title
-            - }
-        div.section
-          include ../_includes/_navigation.pug
+        //div.section
 
       div.column.is-one-quarters-desktop.sidebar
         include ../_includes/_sidebar.pug
