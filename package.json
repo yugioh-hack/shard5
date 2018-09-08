@@ -9,6 +9,7 @@
     "kabuto:sass": "node-sass --output-style expanded -o dest src/style/shard5.sass ",
     "kabuto:postcss": "postcss -c postcss.config.js -r dest/shard5.css",
     "clean-css": "rimraf dest/*.css",
+    "cp-bulma": "cpx node_modules/bulma/sass/*.sass src/style",
     "postinstall": "npm run kabuto & npm run watch",
     "autoprefix": "postcss -u autoprefixer --no-map --autoprefixer browsers 'last 2 versions' -r dest/**/*.css",
     "serve": "browser-sync start --server --serveStatic dest --files 'dest/*.html, dest/**/*.css' ",

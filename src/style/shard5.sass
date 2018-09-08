@@ -1,40 +1,32 @@
 @charset "utf-8"
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
-@import '../../node_modules/bulma/sass/utilities/_all'
+@import 'sass/utilities/_all'
 // set variables
 
-$body-size: 1rem
+@import 'bulma-custom'
 
 // set variables end
 // base
-@import '../node_modules/sanitize.css/sanitize.css'
+@import '../src/style/sanitize.css/sanitize.css'
 //@import '../node_modules/bootstrap/dist/css/bootstrap-reboot.css'
 //@import '../../node_modules/bulma/sass/base/minireset'
-@import '../../node_modules/bulma/sass/base/generic'
-@import '../../node_modules/bulma/sass/base/helpers'
-// elements
-@import '../../node_modules/bulma/sass/elements/title'
-@import '../../node_modules/bulma/sass/elements/container'
-@import '../../node_modules/bulma/sass/elements/content'
-@import '../../node_modules/bulma/sass/elements/form'
-@import '../../node_modules/bulma/sass/elements/image'
-@import '../../node_modules/bulma/sass/elements/table'
-@import '../../node_modules/bulma/sass/elements/tag'
-@import '../../node_modules/bulma/sass/elements/title'
-//components
-@import '../../node_modules/bulma/sass/components/card'
-@import '../../node_modules/bulma/sass/components/navbar'
-@import '../../node_modules/bulma/sass/components/pagination'
-@import '../../node_modules/bulma/sass/components/tabs'
-@import '../../node_modules/bulma/sass/components/menu'
-
-//grid
-@import '../../node_modules/bulma/sass/grid/_all'
-
-//layout
-@import '../../node_modules/bulma/sass/layout/_all'
-
-/* shard5-css */
+@import 'sass/base/generic'
+@import 'sass/base/helpers'
+@import 'sass/elements/title'
+@import 'sass/elements/container'
+@import 'sass/elements/content'
+@import 'sass/elements/form'
+@import 'sass/elements/image'
+@import 'sass/elements/table'
+@import 'sass/elements/tag'
+@import 'sass/elements/title'
+@import 'sass/components/card'
+@import 'sass/components/navbar'
+@import 'sass/components/pagination'
+@import 'sass/components/tabs'
+@import 'sass/components/menu'
+@import 'sass/grid/_all'
+@import 'sass/layout/_all'
 @import '_screen-reader-text'
 @import '_breadcrumb'
 @import '_sidebar'
