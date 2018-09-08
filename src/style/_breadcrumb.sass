@@ -1,19 +1,22 @@
-$breadcrumb-item-color: $link !default
-$breadcrumb-item-hover-color: $link-hover !default
-$breadcrumb-item-active-color: $text-strong !default
-$breadcrumb-item-margin: 10px !default
-$breadcrumb-list-padding: $gap !default
-$breadcrumb-list-circle: 13px !default
+$breadcrumb-bg-color: desaturate($primary, 25%)
+$breadcrumb-item-color: $link-white //$link
+$breadcrumb-item-hover-color: $link-white-hover//$link-hover
+$breadcrumb-item-active-color: $dark-invert
+$breadcrumb-item-margin: 10px
+$breadcrumb-list-padding: .8rem
+$breadcrumb-list-circle: 13px
+
+$breadcrumb-padding: 0.5rem 1.5rem
+$breadcrumb-padding-medium: 1rem 1.5rem
+$breadcrumb-padding-large: 1.2rem 1.5rem
 
 .breadcrumb
   +block
   +unselectable
-  //align-items: stretch
   font-size: $size-normal
-  display: flex
-  overflow: hidden
   overflow-x: auto
-  white-space: nowrap
+  width: 100%
+  background-color: $breadcrumb-bg-color
 
   a
     color: $breadcrumb-item-color
@@ -24,14 +27,27 @@ $breadcrumb-list-circle: 13px !default
     &:hover
       color: $breadcrumb-item-hover-color
 
+  &__inner
+    padding: $breadcrumb-padding
+    // Responsiveness
+    +desktop
+      // Sizes
+      &.is-medium
+        padding: $breadcrumb-padding-medium
+      &.is-large
+        padding: $breadcrumb-padding-large
   &__list
     //align-items: center
+    margin: 0
+    padding: 0
+    list-style: none
     display: flex
+    line-height: 1.4 //2行以上を想定
     //flex-direction: column
     flex-grow: 1
     flex-shrink: 0
+    flex-wrap: wrap
     justify-content: flex-start
-    list-style: none
     //padding-left: $breadcrumb-list-padding / 8
     &.is-active
       a
@@ -43,21 +59,16 @@ $breadcrumb-list-circle: 13px !default
     align-items: center
     padding: $breadcrumb-item-margin 0
     &::after
-      //content: ''
-      //position: absolute
     &:not(:last-child)
       &::after
         content: '/'
-      //background: $breadcrumb-item-color
-      //&::before
-        position: absolute
-        left: $breadcrumb-list-padding / 2
-        margin-top: 16px
-        width: 2px
-        height: $gap
-        background: $grey-light
+        margin: 0 $breadcrumb-list-padding
+        color: $breadcrumb-item-color
     &.active
         pointer-events: none
         &::after
           background: $grey-light
 
+  &__current
+    font-weight: 800
+    color: $breadcrumb-item-color
