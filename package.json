@@ -6,9 +6,9 @@
   "scripts": {
     "watch:build": "onchange 'src/**/*.sass' -- npm run build:css",
     "build:css": "npm-run-all clean-css kabuto:*",
-    "kabuto:sass": "node-sass --output-style expanded -o ./dest/css/shard5.css ./src/style/shard5.sass ",
-    "kabuto:postcss": "postcss -c postcss.config.js -r dest/css/shard5.css",
-    "clean-css": "rimraf dest/css",
+    "kabuto:sass": "node-sass --output-style expanded -o dest src/style/shard5.sass ",
+    "kabuto:postcss": "postcss -c postcss.config.js -r dest/shard5.css",
+    "clean-css": "rimraf dest/*.css",
     "postinstall": "npm run kabuto & npm run watch",
     "autoprefix": "postcss -u autoprefixer --no-map --autoprefixer browsers 'last 2 versions' -r dest/**/*.css",
     "serve": "browser-sync start --server --serveStatic dest --files 'dest/*.html, dest/**/*.css' ",
