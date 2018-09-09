@@ -1,11 +1,19 @@
 $index-padding: $gap / 2
 
 .index
+  &__mainSection
+    background-color: $body-background-color
+  &__loopSection
   &__title
     font-size: $size-5
     +desktop
       font-size: $size-3
   &__article
+    background-color: $white
+    margin: 0 0 1rem 0
+    +desktop
+      margin: 0 0 1.5rem 0
+    padding: 1rem
   &__header
     padding: $index-padding 0 0 0
     +tablet
