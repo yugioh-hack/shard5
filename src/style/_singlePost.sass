@@ -7,6 +7,13 @@ $single-padding-tab: $gap
     +desktop
       font-size: $size-2
   &article
+  &byline
+    &__author
+    &__updated
+      &::before
+        +icon
+        +fa-calendar
+        margin-right: 1rem
   &header
     padding: $single-padding 0 0 0
     +tablet
