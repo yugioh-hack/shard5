@@ -8,6 +8,7 @@ $content-blockquote-padding: 1.25rem 1.5rem !default
 
 $content-pre-padding: 1.25rem 1.5rem !default
 
+$content-table-background-color: $white !default
 $content-table-cell-border: 1px solid $border !default
 $content-table-cell-border-width: 0 0 1px !default
 $content-table-cell-padding: 0.5rem 0.75rem !default
@@ -106,6 +107,7 @@ $content-table-foot-cell-color: $text-strong !default
   sub
     font-size: 75%
   table
+    background-color: $content-table-background-color
     width: 100%
     td,
     th
@@ -117,6 +119,8 @@ $content-table-foot-cell-color: $text-strong !default
       color: $content-table-cell-heading-color
       text-align: left
     thead
+      th
+        background-color: $content-table-cell-background-color
       td,
       th
         border-width: $content-table-head-cell-border-width
