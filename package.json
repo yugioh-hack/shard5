@@ -38,6 +38,7 @@
     "bootstrap": "^4.1.3",
     "browser-sync": "^2.24.7",
     "bulma": "^0.7.1",
+    "cpx": "^1.5.0",
     "debug": "^3.1.0",
     "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
@@ -64,6 +65,5 @@
   ],
   "author": "Yugioh Hack",
   "license": "MIT",
-  "homepage": "https://github.com/yugioh-hack/shard5/#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/yugioh-hack/shard5/#readme"
 }
