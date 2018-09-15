@@ -1,18 +1,23 @@
-$breadcrumb-bg-color: desaturate($primary, 25%)
-$breadcrumb-item-color: $link-white //$link
-$breadcrumb-item-hover-color: $link-white-hover//$link-hover
-$breadcrumb-item-active-color: $dark-invert
-$breadcrumb-item-margin: 10px
-$breadcrumb-list-padding: .8rem
-$breadcrumb-list-circle: 13px
+$breadcrumb-bg-color: desaturate($primary, 25%) !default
+$breadcrumb-item-color: $link-white !default//$link
+$breadcrumb-item-hover-color: $link-white-hover !default//$link-hover
+$breadcrumb-item-active-color: $dark-invert !default
+$breadcrumb-item-margin: 10px !default
+$breadcrumb-list-padding: .8rem !default
+$breadcrumb-list-circle: 13px !default
 
-$breadcrumb-padding: 0.5rem 1.5rem
-$breadcrumb-padding-medium: 1rem 1.5rem
-$breadcrumb-padding-large: 1.2rem 1.5rem
+$breadcrumb-padding: 0.5rem 1.5rem !default
+$breadcrumb-padding-medium: 1rem 1.5rem !default
+$breadcrumb-padding-large: 1.2rem 1.5rem !default
 
 .breadcrumb
   +block
   +unselectable
+  margin: 0
+  &:not(:last-child)
+    margin: 0
+    +desktop
+      margin: 0 0 1rem 0
   font-size: $size-normal
   overflow-x: auto
   width: 100%
