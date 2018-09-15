@@ -137,6 +137,13 @@ $content-table-foot-cell-color: $text-strong !default
           td,
           th
             border-bottom-width: 0
+  cite
+    font-size: $content-cite-font-size
+    display: block
+    text-align: right
+    &::before
+      content: '-'
+      margin-right: .7rem
   // Sizes
   &.is-small
     font-size: $size-small
