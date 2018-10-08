@@ -7735,6 +7735,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .single-section {
   background-color: #fefefd;
 }
+.singlePost--mainContent {
+  height: 100%;
+}
 .singlePost--title {
   font-size: 2rem;
 }
@@ -7742,6 +7745,19 @@ a.navbar-item:hover, a.navbar-item.is-active,
   .singlePost--title {
     font-size: 2.5rem;
   }
+}
+.singlePost--article {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .singlePost--byline__updated::before {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -7765,6 +7781,11 @@ a.navbar-item:hover, a.navbar-item.is-active,
   .singlePost--header {
     padding: 0;
   }
+}
+.singlePost--content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .singlePost--footer__info {
   margin: 0 0 1.5rem 0;

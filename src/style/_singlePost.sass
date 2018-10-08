@@ -5,11 +5,17 @@ $single-padding-tab: $gap
   background-color: $post-Background-color //$white
 
 .singlePost--
+  &mainContent
+    height: 100% // 親要素の高さまで広げる
   &title
     font-size: $size-3
     +desktop
       font-size: $size-2
   &article
+    height: 100% // 親要素（この場合はmain)まで広げる
+    display: flex // 以下で、flexによる位置調整を行う
+    flex-direction: column
+    justify-content: space-between
   &byline
     &__author
     &__updated
@@ -21,6 +27,8 @@ $single-padding-tab: $gap
     padding: $single-padding 0 0 0
     +tablet
       padding: 0
+  &content
+    flex-grow: 1 // contentをflexで目いっぱいに伸ばす
   &footer
     &__info
       margin: 0 0 1.5rem 0
