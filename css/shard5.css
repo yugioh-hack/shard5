@@ -7577,6 +7577,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
   width: 1px;
   overflow: hidden;
 }
+.archive-section {
+  background-color: #fefefd;
+}
 .breadcrumb {
   margin: 0;
   font-size: 1rem;
@@ -7587,10 +7590,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .breadcrumb:not(:last-child) {
   margin: 0;
 }
-@media screen and (min-width: 1028px) {
-  .breadcrumb:not(:last-child) {
-    margin: 0 0 1rem 0;
-  }
+.breadcrumb.has-shadow {
+  -webkit-box-shadow: 0 2px 0 0 whitesmoke;
+          box-shadow: 0 2px 0 0 whitesmoke;
 }
 .breadcrumb a {
   color: whitesmoke;
@@ -7659,11 +7661,15 @@ a.navbar-item:hover, a.navbar-item.is-active,
   font-weight: 800;
   color: whitesmoke;
 }
-.common--footer {
+.common-header {
+  background-color: #00d1b2;
+}
+.common-footer {
   margin-top: auto;
 }
 .front-section {
   border-bottom: 1px solid #dbdbdb;
+  background-color: #fefefd;
 }
 .front-icon {
   font-size: 2rem;
@@ -7695,6 +7701,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .widget {
   margin-bottom: 2rem;
 }
+.search-section {
+  background-color: #fefefd;
+}
 .index--mainSection {
   background-color: #F4F3ED;
 }
@@ -7723,7 +7732,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
     padding: 0;
   }
 }
-.singleSection {
+.single-section {
   background-color: #fefefd;
 }
 .singlePost--title {
