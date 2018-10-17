@@ -1,3 +1,4 @@
+$single-margin: $gap / 2
 $single-padding: $gap / 2
 $single-padding-tab: $gap
 
@@ -25,8 +26,10 @@ $single-padding-tab: $gap
         margin-right: 1rem
   &header
     padding: $single-padding 0 0 0
+    margin-bottom: $single-margin
     +tablet
       padding: 0
+      margin-bottom: $single-margin
   &content
     flex-grow: 1 // contentをflexで目いっぱいに伸ばす
   &footer
