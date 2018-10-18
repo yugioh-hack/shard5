@@ -1,7 +1,9 @@
 $single-margin: $gap / 2
 $single-padding: $gap / 2
 $single-padding-tab: $gap
-
+$single-post-title : $size-4
+$single-post-title-desk : $size-3
+$single_footer_border: 1px solid $grey-lighter
 .single-section
   background-color: $post-Background-color //$white
 
@@ -9,9 +11,9 @@ $single-padding-tab: $gap
   &mainContent
     height: 100% // 親要素の高さまで広げる
   &title
-    font-size: $size-3
+    font-size: $single-post-title
     +desktop
-      font-size: $size-2
+      font-size: $single-post-title-desk
   &article
     height: 100% // 親要素（この場合はmain)まで広げる
     display: flex // 以下で、flexによる位置調整を行う
@@ -33,6 +35,9 @@ $single-padding-tab: $gap
   &content
     flex-grow: 1 // contentをflexで目いっぱいに伸ばす
   &footer
+    margin-top: .5rem
+    padding-top: .5rem
+    border-top: $single_footer_border
     &__info
       margin: 0 0 1.5rem 0
     &__tagName
