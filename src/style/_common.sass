@@ -1,5 +1,9 @@
 .common
   &-wrapper
+    display: flex;
+    flex-wrap: nowrap
+    flex-direction: column;
+    min-height: 100vh;
   &-header
     background-color: $primary
     &--title
@@ -10,5 +14,5 @@
       font-size: 1.75rem
       font-weight: 600
   &-footer
+    position: relative
     margin-top: auto
-

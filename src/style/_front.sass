@@ -1,9 +1,16 @@
 .front
+  &-container
+    flex-grow: 1
   &-article
     margin: 0 0 2rem 0
+  &-sections
+    //+desktop
+      position: absolute
+      height: 100%
+      top: -4rem
+    background-color: $post-Background-color //$white
   &-section
     border-bottom: 1px solid $grey-lighter
-    background-color: $post-Background-color //$white
     margin-bottom: .5rem
   &-aside
     &--postList
@@ -29,3 +36,6 @@
       content: "\f15c"
       font-weight: 400
       margin-right: .7rem
+  &-viewall
+    display: flex
+    justify-content: flex-end
