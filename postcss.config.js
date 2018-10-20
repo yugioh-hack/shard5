@@ -3,7 +3,7 @@ module.exports = ctx => ({
     "postcss-import": {},
     "autoprefixer": {
       "browsers": "last 2 versions",
-    },
-    "csswring":{}
+    }//,
+    //"csswring":{}
   }
 })
