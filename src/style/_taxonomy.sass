@@ -6,10 +6,44 @@ $tax_description_color: $grey
     padding-bottom: .5rem
     margin-bottom: .5rem
   &-title
+    &::before
+      font-family: "Font Awesome 5 Free"
+      content: "\f187"
+      font-weight: 900
+      color: $grey-dark
+      margin-right: .4rem
   &-description
     p
       color: $tax_description_color
       font-size: $tax_description_size
       margin-bottom: 0
+  &-section // 無理やり隣接セレクタを使っている
+    article
+    & .taxonomy-section
+      article
+        border-top: 1px solid $border
+
   &-article
+    padding: .5rem .3rem
     &__title
+      &::before
+        font-family: "Font Awesome 5 Free"
+        content: "\f15c"
+        font-weight: 400
+        color: $grey-dark
+        margin-right: .4rem
+    &__time,
+    &__tagItem
+      font-size: .9rem
+    &__time
+      color: $grey-darker
+    &__tagItem
+      background-color: $grey-lighter
+      border-radius: $radius
+      margin-left: .4rem
+      padding: .2rem .3rem
+      a
+        color: $grey-darker
+        &:hover,
+        &:active
+          color: $grey-darker
