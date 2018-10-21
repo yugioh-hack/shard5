@@ -1,3 +1,7 @@
+$narsada_info-margin: 1.5rem
+$narsada_info-padding: .5rem
+$dl-info-shadow: 0 2px 2px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
+$narsada_info-bgcolor: rgba($info,0.04)
 // 横定義
 .horizontal
   margin: 1.5rem 0
@@ -12,3 +16,33 @@
     flex-direction: column
     //align-self: stretch
     //justify-content
+.narsada_info
+  margin-block-start: 0
+  margin-block-end: 0
+  border: 1px solid $border
+  border-radius: $radius
+  box-shadow: $dl-info-shadow
+  margin: $narsada_info-margin
+  background: $narsada_info-bgcolor
+  dt
+    margin: 0
+    padding: 0
+    //border-bottom: 1px solid $border
+    padding: $narsada_info-padding
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      left: $narsada_info-padding
+      right: $narsada_info-padding
+      bottom: 0
+      border-bottom: 2px solid $border
+
+  dd
+    margin: 0
+    padding: 0
+    padding: $narsada_info-padding
+    text-indent: 1rem
+    position: relative
+  dd + dd
+    margin-top: $narsada_info-padding
