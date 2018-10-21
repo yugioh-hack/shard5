@@ -1,17 +1,19 @@
-$breadcrumb-bg-color: desaturate($primary, 25%) !default
-$breadcrumb-item-color: $link-white !default//$link
-$breadcrumb-item-hover-color: $link-white-hover !default//$link-hover
-$breadcrumb-item-active-color: $dark-invert !default
-$breadcrumb-item-margin: 10px !default
-$breadcrumb-list-padding: .8rem !default
-$breadcrumb-list-circle: 13px !default
+$breadcrumb-bg-color: $grey-lighter//desaturate($primary, 25%)
+$breadcrumb-item-color: $grey//$link-white //$link
+$breadcrumb-item-hover-color: darken($breadcrumb-item-color,20%)//$link-white-hover //$link-hover
+$breadcrumb-item-active-color: $dark-invert
+$breadcrumb-item-margin: .2rem
+$breadcrumb-list-padding: .8rem
+$breadcrumb-list-circle: 13px
 
-$breadcrumb-box-shadow-size: 0 2px 0 0 !default
-$breadcrumb-box-shadow-color: $background !default
+$breadcrumb-item-font-size: .85rem//$size-7
 
-$breadcrumb-padding: 0.5rem 1.5rem !default
-$breadcrumb-padding-medium: 1rem 1.5rem !default
-$breadcrumb-padding-large: 1.2rem 1.5rem !default
+$breadcrumb-box-shadow-size: 0 2px 0 0
+$breadcrumb-box-shadow-color: $background
+
+$breadcrumb-padding: 0.2rem 1.5rem
+$breadcrumb-padding-medium: 1rem 1.5rem
+$breadcrumb-padding-large: 1.2rem 1.5rem
 
 .breadcrumb
   +block
@@ -21,7 +23,7 @@ $breadcrumb-padding-large: 1.2rem 1.5rem !default
     margin: 0
     //+desktop
       margin: 0 0 1rem 0
-  font-size: $size-normal
+  font-size: $breadcrumb-item-font-size
   overflow-x: auto
   width: 100%
   background-color: $breadcrumb-bg-color
