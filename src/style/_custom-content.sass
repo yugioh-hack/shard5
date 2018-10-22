@@ -1,5 +1,5 @@
 $content-heading-color: $text-strong
-$content-heading-weight: $weight-semibold
+$content-heading-weight: $weight-bold//$weight-semibold
 $content-heading-line-height: 1.125
 
 $content-blockquote-background-color: $background
@@ -7,6 +7,8 @@ $content-blockquote-border-left: 5px solid $border
 $content-blockquote-padding: 1.25rem 1.5rem
 
 $content-pre-padding: 1.25rem 1.5rem
+
+$content-block-margin-bottom: 1.85rem
 
 $content-table-background-color: $white
 $content-table-cell-border: 1px solid $border
@@ -22,8 +24,8 @@ $content-p-size: 1rem
 $content-p-line-height: 1.85
 $content-p-size-desk: 1.125rem
 $content-p-line-height-desk: 2.25
-$content-p-marign-bottom: 1.85rem
-$content-p-marign-bottom-desk: 2.25rem
+$content-p-margin-bottom: 1.85rem
+$content-p-margin-bottom-desk: 2.25rem
 
 
 
@@ -41,15 +43,15 @@ $content-p-marign-bottom-desk: 2.25rem
   pre,
   table
     &:not(:last-child)
-      margin-bottom: 1rem
+      margin-bottom: $content-block-margin-bottom
   & > p
     font-size: $content-p-size
     line-height: $content-p-line-height
-    margin-bottom: $content-p-marign-bottom
+    margin-bottom: $content-p-margin-bottom
     +desktop
       font-size: $content-p-size-desk
       line-height: $content-p-line-height-desk
-      margin-bottom: $content-p-marign-bottom-desk
+      margin-bottom: $content-p-margin-bottom-desk
   h1,
   h2,
   h3,
