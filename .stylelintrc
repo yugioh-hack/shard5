@@ -1,34 +1,29 @@
 {
-  "extends": "stylelint-config-primer",
-  "ignoreFiles": [
-    "./css/src/foundation/normalize.css",
-    "./css/src/object/utility/util.css",
-    "./css/src/object/utility/emma-util.css"
-  ],
-  "rules": {
-    "plugin/no-unsupported-browser-features": [true, {
-      "browsers": ["> 1%", "IE 11", "Last 2 versions"],
-      "ignore": [
-        "flexbox",
-        "border-radius",
-        "transforms2d",
-        "css-appearance",
-        "calc",
-        "user-select-none",
-        "css-transitions",
-        "viewport-units",
-        "background-img-opts",
-        "css-gradients",
-        "css3-cursors",
-        "css-resize",
-        "css-boxshadow",
-        "css-fixed",
-        "pointer-events",
-        "multicolumn",
-        "outline",
-        "css-featurequeries",
-        "font-feature"
-      ]
-    }]
-  }
+    "extends": "stylelint-config-suitcss",
+    "plugins": ["stylelint-selector-bem-pattern"],
+    "rules": {
+        # sass記法のコメントで発生するTypeError回避(20180626)
+        "indentation": null,
+        "declaration-block-trailing-semicolon": null,
+        "max-line-length": [ 120, {
+            ignore: "non-comments",
+        } ],
+        "rule-empty-line-before": [ "always-multi-line", {
+            ignore: ["after-comment"],
+        } ],
+        "order/properties-alphabetical-order": null,
+        "number-leading-zero": "never",
+        "block-opening-brace-space-before": null,
+        "block-closing-brace-newline-before": null,
+        "comment-empty-line-before": null,
+        "plugin/selector-bem-pattern": {
+            "implicitComponents": true,
+            "componentName": "[A-Z]+",
+            "componentSelectors": {
+                "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+                "combined": "^\\.combined-{componentName}-[a-z]+$"
+            },
+            "utilitySelectors": "^\\.util-[a-z]+$"
+        },
+    }
 }

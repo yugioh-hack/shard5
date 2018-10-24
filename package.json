@@ -60,7 +60,10 @@
     "sanitize.css": "^7.0.3",
     "sass-lint": "^1.12.1",
     "stylelint": "^9.6.0",
-    "stylelint-config-primer": "^2.2.10"
+    "stylelint-config-primer": "^2.2.10",
+    "stylelint-config-recess-order": "^2.0.0",
+    "stylelint-config-suitcss": "^14.0.0",
+    "stylelint-selector-bem-pattern": "^2.0.0"
   },
   "repository": {
     "type": "git",
