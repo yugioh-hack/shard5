@@ -1,7 +1,7 @@
 $single-margin: $gap / 2
 $single-padding: $gap / 2
 $single-padding-tab: $gap
-$single-post-title : $size-4
+$single-post-title : $size-3
 $single-post-title-desk : $size-3
 $single_footer_border: 1px solid $grey-lighter
 .single-section
@@ -40,20 +40,47 @@ $single_footer_border: 1px solid $grey-lighter
     border-top: $single_footer_border
     &__info
       margin: 0 0 1.5rem 0
-    &__tagName
+    &__termName
       margin: 0 0 .2rem 0
       font-weight: $weight-semibold
-    &__tagLists
+      border-bottom: 1px dotted $border
+    &__termLists
       margin: 0 0 1rem 0
-      font-size: .9rem
-    &__tagItem
-      background-color: $grey-darker
-      border-radius: $radius
-      margin: 0 .4rem 1rem 0
-      padding: .2rem .4rem
+      padding-left: 0
+      list-style: none
+
+      display: flex
+      flex-wrap: wrap
+    &__termItem
+      $this: & //&を変数に格納
+      background-color: #3f3f3f//$grey
+      border-radius: $radius-small
+      border: 1px solid $grey
+      margin: 0 .4rem .4rem 0
+      padding: .1rem .4rem
       font-weight: $weight-medium
+      &--cat
+        @extend #{$this}
+        a
+          &::before
+            font-family: "Font Awesome 5 Free"
+            content: "\f07c"
+            font-weight: 900
+            color: $white
+            margin-right: .2rem
+      &--tag
+        @extend #{$this}
+        a
+          &::before
+            font-family: "Font Awesome 5 Free"
+            content: "\f02b"
+            font-weight: 900
+            color: $white
+            margin-right: .2rem
       a
+        font-size: .85rem
         color: $grey-lighter
+
         &:hover,
         &:active
           color: $grey-lighter
