@@ -92,3 +92,28 @@ $single_footer_border: 1px solid $grey-lighter
         &:hover,
         &:active
           color: $grey-lighter
+
+  &qa
+    &--title
+      font-size: 1.125rem
+      margin-bottom: 1rem
+    &--dl
+      margin-bottom: 1.5rem
+    &--dt
+      background-color: rgba($cyan,0.1)
+      padding: .2rem 0
+      font-size: .95rem
+      font-weight: $weight-normal
+      &::before
+        font-weight: $weight-bold
+        content: "Q:"
+        margin-right: .3rem
+        color: $cyan
+    &--dd
+      font-size: .95rem
+      margin-bottom: 1.5rem
+      &::before
+        font-weight: $weight-bold
+        margin-right: .3rem
+        content: "A:"
+        color: $tomato
