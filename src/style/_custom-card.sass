@@ -1,0 +1,195 @@
+$narsada_card-color: $text
+$narsada_card-background-color: $white
+$narsada_card-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
+$narsada_card-header-background-color: none
+$narsada_card-header-color: $text-strong
+$narsada_card-header-shadow: 0 1px 2px rgba($black, 0.1)
+$narsada_card-header-weight: $weight-bold
+$narsada_card-content-background-color: none
+$narsada_card-footer-background-color: none
+$narsada_card-footer-border-top: 1px solid $border
+$narsada_card-description-dt-basis: 25%
+$narsada_card-alt-description-dt-basis: 15%
+
+.narsada_card-alt
+  background-color: $narsada_card-background-color
+  box-shadow: $narsada_card-shadow
+  color: $narsada_card-color
+  max-width: 95%
+  margin-right: auto
+  margin-left: auto
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  +desktop
+    flex-direction: row
+
+  &_image
+    //width: 30%
+    //flex-basis: $narsada_card-description-dt-basis
+    margin: 0
+
+    img
+      height: 250px
+      object-fit: cover
+
+  &-title
+    overflow-wrap: break-word
+    line-height: $content-heading-line-height
+    margin: 1rem 0
+    h2
+      font-size: 1.25rem
+
+  &-content
+    margin-left: 0
+    padding: 0 1rem
+    background-color: $narsada_card-content-background-color
+
+  &_description
+    //width: 70%
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    padding: 0
+    &_dt
+      font-size: .9rem
+      font-weight: bold
+      margin: 0 0 .5rem 0
+      text-align: right
+      flex-basis: $narsada_card-alt-description-dt-basis
+
+    &_dd
+      font-size: .9rem
+      margin: 0 0 .5rem 0
+      padding-left: .5rem
+      flex-basis: 100%-$narsada_card-alt-description-dt-basis
+
+  &-header
+    background-color: $narsada_card-header-background-color
+    align-items: stretch
+    box-shadow: $narsada_card-header-shadow
+    display: flex
+
+    &-title
+      align-items: center
+      color: $narsada_card-header-color
+      display: flex
+      flex-grow: 1
+      font-weight: $narsada_card-header-weight
+      padding: 0.75rem
+      &.is-centered
+        justify-content: center
+
+    &-icon
+      align-items: center
+      cursor: pointer
+      display: flex
+      justify-content: center
+      padding: 0.75rem
+
+
+
+  &-footer
+    background-color: $narsada_card-footer-background-color
+    border-top: $narsada_card-footer-border-top
+    align-items: stretch
+    display: flex
+
+    &-item
+      align-items: center
+      display: flex
+      flex-basis: 0
+      flex-grow: 1
+      flex-shrink: 0
+      justify-content: center
+      padding: 0.75rem
+      &:not(:last-child)
+        border-right: $narsada_card-footer-border-top
+
+// Combinations
+
+.narsada_card
+  .media:not(:last-child)
+    margin-bottom: 0.75rem
+.narsada_card
+  background-color: $narsada_card-background-color
+  box-shadow: $narsada_card-shadow
+  color: $narsada_card-color
+  max-width: 300px
+  margin-right: auto
+  margin-left: auto
+  position: relative
+
+  &-title
+    overflow-wrap: break-word
+    font-size: 1.25rem
+    line-height: $content-heading-line-height
+    margin-bottom: 1rem
+  &-description
+    display: flex
+    flex-wrap: wrap
+
+    dt
+      font-size: .95rem
+      margin: 0 0 .5rem 0
+      text-align: right
+      flex-basis: $narsada_card-description-dt-basis
+    dd
+      font-size: .95rem
+      margin: 0 0 .5rem 0
+      padding-left: .5rem
+      flex-basis: 100%-$narsada_card-description-dt-basis
+
+  &-header
+    background-color: $narsada_card-header-background-color
+    align-items: stretch
+    box-shadow: $narsada_card-header-shadow
+    display: flex
+
+    &-title
+      align-items: center
+      color: $narsada_card-header-color
+      display: flex
+      flex-grow: 1
+      font-weight: $narsada_card-header-weight
+      padding: 0.75rem
+      &.is-centered
+        justify-content: center
+
+    &-icon
+      align-items: center
+      cursor: pointer
+      display: flex
+      justify-content: center
+      padding: 0.75rem
+
+  &-image
+    display: block
+    position: relative
+
+  &-content
+    background-color: $narsada_card-content-background-color
+    padding: 1.5rem
+
+  &-footer
+    background-color: $narsada_card-footer-background-color
+    border-top: $narsada_card-footer-border-top
+    align-items: stretch
+    display: flex
+
+    &-item
+      align-items: center
+      display: flex
+      flex-basis: 0
+      flex-grow: 1
+      flex-shrink: 0
+      justify-content: center
+      padding: 0.75rem
+      &:not(:last-child)
+        border-right: $narsada_card-footer-border-top
+
+// Combinations
+
+.narsada_card
+  .media:not(:last-child)
+    margin-bottom: 0.75rem
