@@ -119,11 +119,18 @@
 
     &__listItem
       font-size: .95rem
+      display: flex
+      &:not(:last-child)
+        margin-bottom: .3rem
 
     &__listIcon
-      background-color: $orange
+      background-color: $primary//$orange
       border-radius: $radius
-      padding: 0 .5rem
+      padding: 0
+      display: flex
+      justify-content: center
+      align-items: center
       color: $white
       font-size: .9rem
       margin-right: .5rem
+      flex-basis: 5rem
