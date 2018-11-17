@@ -27,7 +27,7 @@ $content-p-line-height-desk: 1.85
 $content-p-margin-bottom: 1.85rem
 $content-p-margin-bottom-desk: 2.25rem
 
-
+$content-img-margin-bottom: 1.85rem
 
 .content
   +block
@@ -126,6 +126,8 @@ $content-p-margin-bottom-desk: 2.25rem
       display: inline-block
     figcaption
       font-style: italic
+  > img
+    margin-bottom: $content-img-margin-bottom
   > pre
     +overflow-touch
     overflow-x: auto
