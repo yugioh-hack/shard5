@@ -1,31 +1,81 @@
+$button-border-width: $control-border-width
+$button-padding-vertical: calc(2.375em - #{$button-border-width})
+$button-padding-horizontal: 0.75em
+
 .common
+
   &-wrapper
     display: flex;
     flex-wrap: nowrap
     flex-direction: column;
     min-height: 100vh;
+
   &-logo
     align-items: center
     border-radius: $radius-large
     max-width: 25px
     +desktop
       max-width: 40px
+
   &-header
     background-color: $primary
+
     &--title
       font-size: 1.75rem
       font-weight: 600
+
     &--main
       border-bottom: 1px solid $header-border-color
+    &__widget
+
   &-hero
+
     &--title
       color: $white
       font-size: 1.75rem
       font-weight: 600
+
     &--description
       color: $white
       font-size: 1.45rem
       font-weight: 400
+      display: flex
+      justify-content: center
+      align-items: center
+
+    &--widget
+      display: flex
+      margin-top: 1.3rem
+      flex-wrap: wrap
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      position: relative
+      z-index: 10
+      &__button
+        +control
+        +unselectable
+        transition-duration: .3s
+        cursor: pointer
+        justify-content: center
+        padding-bottom: $button-padding-vertical
+        padding-left: $button-padding-horizontal
+        padding-right: $button-padding-horizontal
+        padding-top: $button-padding-vertical
+        text-align: center
+        font-weight: bold
+        white-space: nowrap
+        background: transparent
+        border-color: $white
+        color: $white
+        &:not(:last-child)
+          margin-bottom: 1.2rem
+        +desktop
+          width: 70%
+        &:hover,
+        &:focus
+          background-color: rgba(255,255,255,.2)
+
   &-footer
     background: $white
     position: relative
