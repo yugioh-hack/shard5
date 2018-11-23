@@ -122,6 +122,13 @@
     &__listItem
       font-size: .95rem
       display: flex
+      flex-direction: column
+      a
+        margin-left: 1.5rem
+      +desktop
+        flex-direction: row
+        a
+          margin-left: 0
       &:not(:last-child)
         margin-bottom: .3rem
 
@@ -134,5 +141,7 @@
       align-items: center
       color: $white
       font-size: .75rem
-      margin-right: .5rem
-      flex-basis: 5rem
+      width: 5rem
+      +desktop
+        margin-right: .5rem
+        flex-basis: 5rem

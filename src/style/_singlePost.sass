@@ -11,9 +11,9 @@ $single_footer_border: 1px solid $grey-lighter
   border: 1px solid $section-border-color
 
 .singlePost
-  &_mainContent
+  &-mainContent
     height: 100% // 親要素の高さまで広げる
-  &_title
+  &-title
     font-size: $single-post-title
     margin-top: 1.8rem
     margin-bottom: 1.8rem
@@ -22,12 +22,12 @@ $single_footer_border: 1px solid $grey-lighter
       margin-top: 2rem
       margin-bottom: 2rem
       font-size: $single-post-title-desk
-  &_article
+  &-article
     height: 100% // 親要素（この場合はmain)まで広げる
     display: flex // 以下で、flexによる位置調整を行う
     flex-direction: column
     justify-content: space-between
-  &_byline
+  &-byline
     margin-bottom: 0
     align-self: flex-end
     &__updated
@@ -35,7 +35,7 @@ $single_footer_border: 1px solid $grey-lighter
         +icon
         +fa-calendar
         margin-right: 1rem
-  &_header
+  &-header
     padding: $single-padding 0 0 0
     margin-bottom: $single-margin
     +tablet
@@ -45,9 +45,9 @@ $single_footer_border: 1px solid $grey-lighter
     &__meta
       display: flex
 
-  &_content
+  &-content
     flex-grow: 1 // contentをflexで目いっぱいに伸ばす
-  &_footer
+  &-footer
     margin-top: .5rem
     padding-top: .5rem
     border-top: $single_footer_border
@@ -98,7 +98,7 @@ $single_footer_border: 1px solid $grey-lighter
         &:active
           color: $grey-lighter
 
-  &_qa
+  &-qa
     &--title
       font-size: 1.125rem
       margin-bottom: 1rem
@@ -123,7 +123,7 @@ $single_footer_border: 1px solid $grey-lighter
         content: "A:"
         color: $tomato
 
-  &_usermeta
+  &-usermeta
     flex: 1
     display: flex
     &__img
